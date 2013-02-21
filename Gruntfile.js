@@ -13,7 +13,14 @@ module.exports = function(grunt) {
             
             //note: src/vendor DOES need to be included in the build, but not until I can make it work
             //and pass the tests properly
-            build: ['util/build_intro.js', "src/**/*.js", 'util/build_outro.js']
+            build: [
+                'util/build_intro.js',
+                'src/game.js',
+                'src/components/*',
+                'src/prefabs/*',
+                'src/scenes/*',
+                'util/build_outro.js'
+            ]
         },
         watch: {
             all: {
@@ -42,7 +49,7 @@ module.exports = function(grunt) {
                 ,browser: true
                 ,laxcomma: true
                 ,globals: {
-                    ,should: true
+                    should: true
                     ,it: true
                     ,before: true
                     ,after: true

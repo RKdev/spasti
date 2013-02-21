@@ -5,4 +5,4 @@ Spasti.Prefab.Robot = {
     components: {
         "spasti.robot": {},
     }
-}
+};

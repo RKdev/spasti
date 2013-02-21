@@ -8,4 +8,4 @@ Spasti.Scene.Testing = {
     objects: [
         Spasti.Prefab.Robot
     ]
-}
+};

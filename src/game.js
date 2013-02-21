@@ -33,4 +33,4 @@ Spasti.config = {
     },
     scripts: [],
     requiredAssets: []
-}
+};

@@ -12,4 +12,4 @@ Spasti.Scene.AsteroidDefense = {
         'spasti.defense_drone',
         'spasti.whatever...'
     ]
-}
+};

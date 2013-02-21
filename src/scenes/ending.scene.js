@@ -2,4 +2,4 @@
 
 Spasti.Scene.Ending = {
     name: "Ending"    
-}
+};

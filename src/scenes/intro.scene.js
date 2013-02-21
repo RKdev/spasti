@@ -2,4 +2,4 @@
 
 Spasti.Scene.Intro = {
     name: "Intro"
-}
+};
