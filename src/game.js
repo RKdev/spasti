@@ -17,7 +17,7 @@ Spasti.config = {
     name: "Spasti!",
     debug: true,
     loader: {
-        baseUrl: "http://localhost/spasti/assets"
+        assetUrl: "https://www.udacity.com/"
     },
     plugins: [
         Javelin.Plugin.Canvas2d
@@ -26,9 +26,10 @@ Spasti.config = {
     ],
     options: {
         "canvas2d": {
-            canvas: document.getElementById('game'),
+            //canvas: document.getElementById('game'),      //this one has to be set on index.html after the DOM loads, obvs
             height: 600,
-            width: 800
+            width: 800,
+            framesPerSecond: 1000/30
         }
     },
     scripts: [],

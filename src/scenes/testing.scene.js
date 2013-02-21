@@ -6,6 +6,11 @@ Spasti.Scene.Testing = {
         'spasti.robot'
     ],
     objects: [
-        Spasti.Prefab.Robot
+        {
+            name: "Robot",
+            components: {
+                "spasti.robot_manager": {},
+            }
+        }
     ]
 };

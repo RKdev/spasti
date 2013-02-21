@@ -26,6 +26,7 @@ module.exports = function(grunt) {
             all: {
                 files: "<%= files.lint %>",
                 tasks: ["default"],
+                debounceDelay: 100,
                 options: {
                     interrupt: true
                 }
