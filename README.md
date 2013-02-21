@@ -17,7 +17,3 @@ Here's what you need to know about the structure of the files.
 * `util/` - One-off utilities, mostly for the build process.
 * `Gruntfile.js` - Grunt settings for the project
 * `index.html` - The entry-point for the game.  It includes the necessary files, then instantiates the engine, loads the first scene, and runs.
-
-## TODO ##
-
-* create project grunt file, package.json, build directories
