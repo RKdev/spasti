@@ -1,7 +1,7 @@
 node_modules/
-vendor/
+vendor/*
 !vendor/README.md
-assets/
+assets/*
 !assets/README.md
-build/
+build/*
 !build/README.md
