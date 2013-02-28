@@ -25,31 +25,32 @@ Spasti.Component.Robot = function(go, comp) {
     
     var sprite = go.getComponent('sprite');
     var transform = go.getComponent('transform2d');
-    var currentFrame = 0;
+    var currentFrame = 0;    
+    var frames = [];
     
-    comp.frames = [];
-        
+    
+    comp.speed = 10;
+    
     comp.$on('create', function() {
         go.active = false;
         
         //load assets on start
         go.engine.loadAssets(requiredAssets, function(images) {
-            comp.frames = images;
+            frames = images;
             go.active = true;
         });
     });
     
-    comp.$on('update', function(deltaTime) {
+    comp.$on('update', function(deltaTime) {        
         //set the current image
-        sprite.image = comp.frames[currentFrame];
+        sprite.image = frames[currentFrame];
         
         //just to prove a point, that it can move
-        transform.position.x = currentFrame;
+        transform.position.x += comp.speed / deltaTime;
         
         //modify the index for the next frame
-        currentFrame = (currentFrame + 1) % comp.frames.length;
+        currentFrame = (currentFrame + 1) % frames.length;
     });
 };
 Spasti.Component.Robot.alias = "spasti.robot";
 Spasti.Component.Robot.requires = ['sprite'];
-Javelin.register(Spasti.Component.Robot);

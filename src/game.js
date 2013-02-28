@@ -26,12 +26,15 @@ Spasti.config = {
     ],
     options: {
         "canvas2d": {
-            //canvas: document.getElementById('game'),      //this one has to be set on index.html after the DOM loads, obvs
-            height: 600,
-            width: 800,
+            target: '#game',            //TODO: actually implement this properly
+            height: 1024,
+            width: 768,
             framesPerSecond: 1000/30
         }
     },
+    autoregisterComponents: Spasti.Component,
+    autoregisterPrefabs: Spasti.Prefab,
+    autoregisterScenes: Spasti.Scene,
     scripts: [],
     requiredAssets: []
 };
