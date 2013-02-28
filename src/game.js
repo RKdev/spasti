@@ -27,8 +27,8 @@ Spasti.config = {
     options: {
         "canvas2d": {
             target: '#game',            //TODO: actually implement this properly
-            height: 1024,
-            width: 768,
+            height: 768,
+            width: 1024,
             framesPerSecond: 1000/30
         }
     },

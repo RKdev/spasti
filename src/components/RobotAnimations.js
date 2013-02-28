@@ -10,7 +10,7 @@ Spasti.Component.RobotAnimations = function(go, comp) {
         var animator = go.getComponent('spriteAnimator');
 
         //load assets on start
-        go.engine.loadAsset('assets/atlases/robowalk.atlas.json', function(atlas) {
+        go.engine.loadAsset('assets/robot.atlas.json', function(atlas) {
             
             //walk animation
             animator.define('walk', [

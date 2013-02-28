@@ -3,7 +3,9 @@
 This is the game *Spasti!*. It is being developed in sync with the *javelin* game engine.  More details on the game will come at 
 a later date.
 
-For more on *Javelin* and how to use it, see the [Javelin repository](#TODO).
+For more on *Javelin* and how to use it, see the [Javelin repository](https://github.com/evillemez/javelin).
+
+> **Note**: to actually run the game/demos, you need `javelin.js` to be included in the `vendor/` directory.  That file is not included in this repo, it should be built from the *Javelin* repo mentioned above.
 
 ## Structure ##
 
