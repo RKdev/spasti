@@ -41,4 +41,4 @@ Spasti.Component.RobotAnimations = function(go, comp) {
     });
 };
 Spasti.Component.RobotAnimations.alias = "spasti.anim.robot";
-Spasti.Component.RobotAnimations.requires = ['sprite'];
+Spasti.Component.RobotAnimations.requires = ['spriteAnimator'];

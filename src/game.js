@@ -17,7 +17,7 @@ Spasti.config = {
     name: "Spasti!",
     debug: true,
     loader: {
-        assetUrl: "https://www.udacity.com/"
+        assetUrl: "http://localhost/spasti/"
     },
     plugins: [
         Javelin.Plugin.Canvas2d

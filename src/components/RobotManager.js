@@ -3,7 +3,7 @@
 //just to experiment with creating multiple game objects
 Spasti.Component.RobotManager = function(go, comp) {
     //public api
-    comp.maxRobots = 50;
+    comp.maxRobots = 100;
     comp.createDelay = 10;
     comp.destroyDelay = 10;
     

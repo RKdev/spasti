@@ -1,56 +1,23 @@
 'use strict';
 
 Spasti.Component.Robot = function(go, comp) {
-    var requiredAssets = [
-        '/media/js/standalone/libs/gamedev_assets/robowalk/robowalk00.png',
-        '/media/js/standalone/libs/gamedev_assets/robowalk/robowalk01.png',
-        '/media/js/standalone/libs/gamedev_assets/robowalk/robowalk02.png',
-        '/media/js/standalone/libs/gamedev_assets/robowalk/robowalk03.png',
-        '/media/js/standalone/libs/gamedev_assets/robowalk/robowalk04.png',
-        '/media/js/standalone/libs/gamedev_assets/robowalk/robowalk05.png',
-        '/media/js/standalone/libs/gamedev_assets/robowalk/robowalk06.png',
-        '/media/js/standalone/libs/gamedev_assets/robowalk/robowalk07.png',
-        '/media/js/standalone/libs/gamedev_assets/robowalk/robowalk08.png',
-        '/media/js/standalone/libs/gamedev_assets/robowalk/robowalk09.png',
-        '/media/js/standalone/libs/gamedev_assets/robowalk/robowalk10.png',
-        '/media/js/standalone/libs/gamedev_assets/robowalk/robowalk11.png',
-        '/media/js/standalone/libs/gamedev_assets/robowalk/robowalk12.png',
-        '/media/js/standalone/libs/gamedev_assets/robowalk/robowalk13.png',
-        '/media/js/standalone/libs/gamedev_assets/robowalk/robowalk14.png',
-        '/media/js/standalone/libs/gamedev_assets/robowalk/robowalk15.png',
-        '/media/js/standalone/libs/gamedev_assets/robowalk/robowalk16.png',
-        '/media/js/standalone/libs/gamedev_assets/robowalk/robowalk17.png',
-        '/media/js/standalone/libs/gamedev_assets/robowalk/robowalk18.png'
-    ];
-    
-    var sprite = go.getComponent('sprite');
-    var transform = go.getComponent('transform2d');
-    var currentFrame = 0;    
-    var frames = [];
-    
-    
+    //public
     comp.speed = 10;
+
+    //private
+    var transform = go.getComponent('transform2d');    
     
+    //play the walk animation when it starts
     comp.$on('create', function() {
-        go.active = false;
-        
-        //load assets on start
-        go.engine.loadAssets(requiredAssets, function(images) {
-            frames = images;
-            go.active = true;
-        });
+        go.getComponent('spriteAnimator').play('walk');
     });
     
-    comp.$on('update', function(deltaTime) {        
-        //set the current image
-        sprite.image = frames[currentFrame];
-        
-        //just to prove a point, that it can move
+    //move the robot accross the screen
+    comp.$on('update', function(deltaTime) {
         transform.position.x += comp.speed / deltaTime;
-        
-        //modify the index for the next frame
-        currentFrame = (currentFrame + 1) % frames.length;
     });
 };
 Spasti.Component.Robot.alias = "spasti.robot";
-Spasti.Component.Robot.requires = ['sprite'];
+//Spasti.Component.Robot.requires = ['sprite'];
+Spasti.Component.Robot.requires = ['spasti.anim.robot'];
+
