@@ -9,7 +9,7 @@ Spasti.Scene.Testing = {
         {
             name: "Robot",
             components: {
-                "spasti.robot_manager": {},
+                "spasti.robot": {},
             }
         }
     ]

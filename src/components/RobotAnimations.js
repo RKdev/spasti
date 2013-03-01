@@ -4,7 +4,6 @@ Spasti.Component.RobotAnimations = function(go, comp) {
     
     //define animations on create
     comp.$on('create', function() {
-        
         //disable until we know we've loaded & defined the animations needed
         go.disable();
         var animator = go.getComponent('spriteAnimator');
