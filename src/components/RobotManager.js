@@ -2,7 +2,7 @@
 
 //just to experiment with creating multiple game objects
 Spasti.Component.RobotManager = function(go, comp) {
-    //public api
+    //public api w/ default values
     comp.maxRobots = 100;
     comp.createDelay = 10;
     comp.destroyDelay = 10;
@@ -16,6 +16,10 @@ Spasti.Component.RobotManager = function(go, comp) {
     var x = 0;
     var creating = true;
     var numCreated = 0;
+    
+    comp.$on('create', function() {
+        console.log("Manager created!");
+    });
     
     //behavior
     comp.$on('update', function(deltaTime) {

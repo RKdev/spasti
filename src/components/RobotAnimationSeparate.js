@@ -1,6 +1,6 @@
 'use strict';
 
-Spasti.Component.RobotAnimationSingle = function(go, comp) {
+Spasti.Component.RobotAnimationSeparate = function(go, comp) {
     
     //define animations on create
     comp.$on('create', function() {
@@ -31,11 +31,11 @@ Spasti.Component.RobotAnimationSingle = function(go, comp) {
         ];
 
         //load assets on start
-        go.engine.loadAsset(assets, function(images) {            
+        go.engine.loadAssets(assets, function(images) {            
             animator.define('walk', images);
             go.enable();
         });
     });
 };
-Spasti.Component.RobotAnimationSingle.alias = "spasti.anim.robot_single";
-Spasti.Component.RobotAnimationSingle.requires = ['spriteAnimator'];
+Spasti.Component.RobotAnimationSeparate.alias = "spasti.anim.robot_separate";
+Spasti.Component.RobotAnimationSeparate.requires = ['spriteAnimator'];
