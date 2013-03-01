@@ -18,4 +18,4 @@ Spasti.Component.RobotController = function(go, comp) {
     });
 };
 Spasti.Component.RobotController.alias = "spasti.robot_controller";
-Spasti.Component.RobotController.requires = ['spasti.anim.robot_separate'];
+Spasti.Component.RobotController.requires = ['spasti.anim.robot_atlas'];

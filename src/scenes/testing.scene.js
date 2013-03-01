@@ -13,7 +13,7 @@ Spasti.Scene.Testing = {
                     maxRobots: 100,
                     createDelay: 10,
                     destroyDelay: 10,
-                    robotPrefab: 'spasti.slow_robot'
+                    robotPrefab: 'spasti.fast_robot'
                 },
             }
         }
