@@ -1,6 +1,6 @@
 'use strict';
 
-Spasti.Component.RobotAnimations = function(go, comp) {
+Spasti.Component.RobotAnimationWithAtlas = function(go, comp) {
     
     //define animations on create
     comp.$on('create', function() {
@@ -39,5 +39,5 @@ Spasti.Component.RobotAnimations = function(go, comp) {
         });
     });
 };
-Spasti.Component.RobotAnimations.alias = "spasti.anim.robot";
-Spasti.Component.RobotAnimations.requires = ['spriteAnimator'];
+Spasti.Component.RobotAnimationWithAtlas.alias = "spasti.anim.robot_atlas";
+Spasti.Component.RobotAnimationWithAtlas.requires = ['spriteAnimator'];

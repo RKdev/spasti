@@ -9,7 +9,9 @@ Spasti.Scene.Testing = {
         {
             name: "Robot",
             components: {
-                "spasti.robot": {},
+                "spasti.robot": {
+                    robotPrefab: 'spasti.fast_robot'
+                },
             }
         }
     ]

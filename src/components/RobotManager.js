@@ -6,6 +6,7 @@ Spasti.Component.RobotManager = function(go, comp) {
     comp.maxRobots = 100;
     comp.createDelay = 10;
     comp.destroyDelay = 10;
+    comp.robotPrefab = null;
     
     //private
     var lastTimeCreated = 0;
@@ -25,7 +26,7 @@ Spasti.Component.RobotManager = function(go, comp) {
 
             if (robots.length < comp.maxRobots && creating) {
                 lastTimeCreated = time;
-                var robot = go.engine.instantiate(Spasti.Prefab.Robot);
+                var robot = go.engine.instantiate(comp.robotPrefab);
                 var t = robot.getComponent('transform2d');
                 robots.push(robot);
                 numCreated++;

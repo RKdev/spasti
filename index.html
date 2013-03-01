@@ -1,11 +1,10 @@
 <html>
     <head>
         <title>Spasti!</title>
-        <script type="text/javascript" charset="utf-8" src='http://code.jquery.com/jquery-1.9.0.min.js'></script>
         <script type="text/javascript" charset="utf-8" src='vendor/javelin.js'></script>
         <script type="text/javascript" charset="utf-8" src='build/spasti.js'></script>
         <script>
-            $(document).ready(function() {
+            window.onload = function() {
                 var config = Spasti.config;
                 config.options.canvas2d.canvas = document.getElementById('game');
                 var engine = new Javelin.Engine(new Javelin.Environment.Browser(), Spasti.config);
@@ -13,7 +12,7 @@
                 engine.loadScene(Spasti.Scene.Testing, function() {
                     engine.run();
                 });
-            });
+            };
         </script>
     </head>
     <body>
