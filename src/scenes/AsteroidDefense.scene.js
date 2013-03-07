@@ -1,7 +1,7 @@
 'use strict';
 
 Spasti.Scene.AsteroidDefense = {
-    name: "Astroid Defense!",
+    name: "spasti.asteroid_defense",
     
     //this forces Javelin to load any required
     //assets defined in these components before

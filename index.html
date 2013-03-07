@@ -5,19 +5,16 @@
         <script type="text/javascript" charset="utf-8" src='build/spasti.js'></script>
         <script>
             window.onload = function() {
-                var config = Spasti.config;
-                config.options.canvas2d.canvas = document.getElementById('game');
                 var engine = new Javelin.Engine(new Javelin.Environment.Browser(), Spasti.config);
                 engine.initialize();
-                engine.loadScene(Spasti.Scene.Testing, function() {
+                engine.loadScene('spasti.test_scene', function() {
                     engine.run();
                 });
             };
         </script>
     </head>
     <body>
-        <div id='container'>
-            <canvas id='game'></canvas>
+        <div id='game'>
         </div>
-    </body>    
+    </body>
 </html>

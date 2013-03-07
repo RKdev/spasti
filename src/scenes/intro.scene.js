@@ -1,5 +1,5 @@
 'use strict';
 
 Spasti.Scene.Intro = {
-    name: "Intro"
+    name: "spasti.intro"
 };

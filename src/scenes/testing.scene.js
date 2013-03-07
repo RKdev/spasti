@@ -1,7 +1,7 @@
 'use strict';
 
 Spasti.Scene.Testing = {
-    name: "Testing",
+    name: "spasti.test_scene",
     requiredAssets: [
         'spasti.robot'
     ],
@@ -14,7 +14,7 @@ Spasti.Scene.Testing = {
                     createDelay: 10,
                     destroyDelay: 10,
                     robotPrefab: 'spasti.slow_robot'
-                },
+                }
             }
         }
     ]

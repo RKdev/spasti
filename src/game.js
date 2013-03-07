@@ -11,6 +11,7 @@ var Spasti = Spasti || {};
 Spasti.Component = {};      //for game object components
 Spasti.Prefab = {};         //for prefab definitions
 Spasti.Scene = {};          //for scene definitions
+Spasti.Plugin = {};         //for experimental engine plugins
 
 //config passed to Javelin engine instance
 Spasti.config = {
@@ -19,14 +20,9 @@ Spasti.config = {
     loader: {
         assetUrl: "http://localhost/spasti/"
     },
-    plugins: [
-        Javelin.Plugin.Canvas2d
-//        ,Javelin.Plugin.Input
-//        ,Javelin.Plugin.Box2d
-    ],
-    options: {
+    plugins: {
         "canvas2d": {
-            target: '#game',            //TODO: actually implement this properly
+            renderTarget: '#game',            //TODO: actually implement this properly
             height: 768,
             width: 1024,
             framesPerSecond: 1000/30
@@ -35,6 +31,7 @@ Spasti.config = {
     autoregisterComponents: Spasti.Component,
     autoregisterPrefabs: Spasti.Prefab,
     autoregisterScenes: Spasti.Scene,
-    scripts: [],
+    autoregisterPlugins: Spasti.Plugin,
+    requireScripts: [],
     requiredAssets: []
 };

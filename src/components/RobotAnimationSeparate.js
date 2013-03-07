@@ -30,8 +30,8 @@ Spasti.Component.RobotAnimationSeparate = function(go, comp) {
             'assets/robot/robowalk18.png'
         ];
 
-        //load assets on start
-        go.engine.loadAssets(assets, function(images) {            
+        //define animations the enable object
+        go.engine.loadAssets(assets, function(images) {
             animator.define('walk', images);
             go.enable();
         });

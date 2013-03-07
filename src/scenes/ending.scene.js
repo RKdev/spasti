@@ -1,5 +1,5 @@
 'use strict';
 
 Spasti.Scene.Ending = {
-    name: "Ending"    
+    name: "spasti.ending"    
 };

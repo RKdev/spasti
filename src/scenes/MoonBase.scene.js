@@ -1,5 +1,5 @@
 'use strict';
 
 Spasti.Scene.MoonBase = {
-    name: "Moon Base"
+    name: "spasti.moon_base"
 };
