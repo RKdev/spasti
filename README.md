@@ -1,3 +1,4 @@
+#Hi Evan#
 # README #
 
 This is the game *Spasti!*. It is being developed in sync with the *javelin* game engine.  More details on the game will come at 
